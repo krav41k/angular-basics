@@ -24,4 +24,9 @@ export class AppComponent {
       id: 1
     }
   ];
+
+  updatePosts(post: Post) {
+    console.log('Post', post);
+    this.posts.unshift(post);
+  }
 }
