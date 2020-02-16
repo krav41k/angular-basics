@@ -18,15 +18,20 @@ export class AppComponent {
       text: 'Я учу компоненты Angular',
       id: 0
     },
-    {
+/*    {
       title: 'Куплю гараж',
       text: 'Куплю гараж. Звоните +8-800-555-3535',
       id: 1
-    }
+    }*/
   ];
 
   updatePosts(post: Post) {
     console.log('Post', post);
     this.posts.unshift(post);
+  }
+
+  removePost(id: number) {
+    console.log(id);
+    this.posts = this.posts.filter(p => p.id !== id);
   }
 }
