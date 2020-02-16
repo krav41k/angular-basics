@@ -18,21 +18,21 @@ export class AppComponent implements OnInit {
       text: 'Я учу компоненты Angular',
       id: 0
     },
-/*    {
+    {
       title: 'Куплю гараж',
       text: 'Куплю гараж. Звоните +8-800-555-3535',
       id: 1
-    }*/
+    }
   ];
 
   ngOnInit(): void {
-    setTimeout(() => {
-      console.log('Timeout');
-      this.posts[0] = {
-        title: 'change',
-        text: 'changed text'
-      };
-    }, 5000);
+    // setTimeout(() => {
+    //   console.log('Timeout');
+    //   this.posts[0] = {
+    //     title: 'change',
+    //     text: 'changed text'
+    //   };
+    // }, 5000);
   }
 
   updatePosts(post: Post) {
