@@ -2,10 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import {StyleDirective} from './directives/style.directive';
+import { IfnotDirective } from './directives/ifnot.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StyleDirective,
+    IfnotDirective
   ],
   imports: [
     BrowserModule
