@@ -2,20 +2,13 @@
   <h1>Angular Pipes</h1>
 
   <p>
-    {{e | number: '1.1-5' }}
-    |
-    {{e | number: '3.1-2' }}
-    |
-    {{e | number: '1.0-0' }}
+    {{ 10 | mult}}
+    {{ 10 | mult: 2}}
+    {{ 10 | mult: 3}}
+    {{ 10 | mult: 5}}
+    {{ 10 | mult: 8}}
+    {{ 10 | mult: 13}}
   </p>
 
-  <p>{{str | uppercase | lowercase | titlecase}}</p>
-  <p>{{str | uppercase | slice:1:-2}}</p>
-  <p>{{date | date: 'MMM, dd yyyy & HH:mm'}}</p>
-
-  <p>{{float}}</p>
-  <p>{{float | currency}}</p>
-  <p>{{float | percent: '3.0-2'}}</p>
-
-  <pre>{{obj | json}}</pre>
+  <p>{{ 'Hello world    ' | exMarks }}</p>
 </div>
