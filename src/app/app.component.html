@@ -1,14 +1,14 @@
 <div class="container">
   <h1>Angular Pipes</h1>
 
-  <p>
-    {{ 10 | mult}}
-    {{ 10 | mult: 2}}
-    {{ 10 | mult: 3}}
-    {{ 10 | mult: 5}}
-    {{ 10 | mult: 8}}
-    {{ 10 | mult: 13}}
-  </p>
-
-  <p>{{ 'Hello world    ' | exMarks }}</p>
+  <button class="btn" (click)="toggle = !toggle">Toggle</button>
+  <hr>
+  <button class="btn" (click)="addPost()">add post</button>
+  <input type="text" [(ngModel)]="search">
+  <div *ngFor="let post of posts | filter: search: toggle"
+       class="card"
+  >
+    <h2>{{post.title}}</h2>
+    <p>{{post.text}}</p>
+  </div>
 </div>
