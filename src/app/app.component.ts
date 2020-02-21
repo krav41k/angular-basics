@@ -14,19 +14,9 @@ export interface Post {
 
 export class AppComponent {
 
-  search = '';
-  toggle = true;
-
-  posts: Post[] = [
-    { title: 'Temperature', text: '+3C'},
-    { title: 'Potato', text: 'Potato - brown vegetable'},
-    { title: 'Ice', text: 'Ice - solid water form'}
-  ];
-
-  addPost() {
-    this.posts.unshift({
-      title: 'Title',
-      text: 'Experimental text'
-    });
-  }
+  p: Promise<string> = new Promise<string>( (resolve, reject) => {
+    setTimeout(() => {
+        resolve('Promise Resolved');
+    }, 4000);
+  });
 }

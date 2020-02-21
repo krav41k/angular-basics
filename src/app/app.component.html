@@ -1,14 +1,5 @@
 <div class="container">
   <h1>Angular Pipes</h1>
 
-  <button class="btn" (click)="toggle = !toggle">Toggle</button>
-  <hr>
-  <button class="btn" (click)="addPost()">add post</button>
-  <input type="text" [(ngModel)]="search">
-  <div *ngFor="let post of posts | filter: search: toggle"
-       class="card"
-  >
-    <h2>{{post.title}}</h2>
-    <p>{{post.text}}</p>
-  </div>
+  <p>Wait for it... {{p | async}}</p>
 </div>
